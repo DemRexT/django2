@@ -1,0 +1,23 @@
+{% extends 'app3/base.html' %}
+
+{% block content %}
+
+{% if orders %}
+<h1>Список заказов клиента</h1>
+<table>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.summa }}</td>
+            <td>{{ order.data }}</td>
+            <td>{{ order.user_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>У клиента нет заказов.</p>
+{% endif %}
+
+{% endblock %}
