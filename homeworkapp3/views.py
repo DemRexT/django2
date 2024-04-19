@@ -26,3 +26,7 @@ def year(request):
     orders = Order.objects.filter(data__gte=seven_days_ago).order_by('-data')
     context = {'orders': orders}
     return render(request, 'app3/zakaz.html', context)
+
+
+def index(request):
+    return render(request, 'base.html')
