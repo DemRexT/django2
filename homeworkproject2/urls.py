@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("homeworkapp3.urls")),
     path('hw4/', include('homeworkapp4.urls')),
-    # path('__debug__/', include('debug_toolbar.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
     path('h6/', include('homeworkapp6.urls')),
     path('/', index)
 ]
